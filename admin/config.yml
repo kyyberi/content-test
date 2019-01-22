@@ -1,0 +1,47 @@
+backend:
+  name: "github"
+  repo: "PlatformOfTrust/content-test"
+publish_mode: "editorial_workflow"
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+media_library:
+  name: "cloudinary"
+collections:
+  - name: "developer-blog"
+    label: "Developer Blog"
+    folder: "_posts/"
+    create: true
+    filter: {field: "section", value: "developer"}
+    fields:
+      - label: "Section"
+        name: "section"
+        widget: "select"
+        options: ["main", "developer"]
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - name: "main-blog"
+    label: "Main Blog"
+    folder: "_posts/"
+    create: true
+    filter: {field: "section", value: "main"}
+    fields:
+      - label: "Section"
+        name: "section"
+        widget: "select"
+        options: ["main", "developer"]
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"

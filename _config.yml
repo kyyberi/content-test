@@ -1,0 +1,16 @@
+title: The Platform of Trust content -repository
+description: >
+  This repository is mostly used to generate Sitemaps and provide storage for
+  the Platform of Trust content pages.
+baseurl: ""
+url: ""
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+exclude:
+  - "*.sh"
+  - "Gemfile*"
+  - "README.md"
